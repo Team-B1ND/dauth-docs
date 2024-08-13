@@ -1,0 +1,33 @@
+name: DAuth
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: yarn install
+      
+      - name: Serve documentation
+        run: yarn serve
+
+      - name: Deploy to GitHub Pages
+        env:
+          GIT_USER: ${{ secrets.GIT_USER }}
+        run: |
+          git config user.name "${{ env.GIT_USER }}"
+          git config user.email "${{ secrets.GIT_EMAIL }}"
+          yarn deploy
