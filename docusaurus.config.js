@@ -5,7 +5,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 module.exports = {
   title: "DAuth Docs",
   tagline: "대구소프트웨어 고등학교 OAuth Docs",
-  url: "http://dauth.b1nd.com/",
+  url: "https://dauth.b1nd.com/",
   baseUrl: "/docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -51,7 +51,7 @@ module.exports = {
           items: [
             {
               label: "DAuth",
-              href: "http://dauth.b1nd.com",
+              href: "https://dauth.b1nd.com",
             },
           ],
         },
@@ -60,11 +60,11 @@ module.exports = {
           items: [
             {
               label: "School HomePage",
-              href: "http://www.dgsw.hs.kr/index.do",
+              href: "https://www.dgsw.hs.kr/index.do",
             },
             {
               label: "DodamDodam",
-              href: "http://dodam.b1nd.com/",
+              href: "https://dodam.b1nd.com/",
             },
           ],
         },
@@ -73,7 +73,7 @@ module.exports = {
           items: [
             {
               label: "Team B1ND",
-              href: "https://b1nd.com/",
+              href: "httpss://b1nd.com/",
             },
             {
               label: "GitHub",

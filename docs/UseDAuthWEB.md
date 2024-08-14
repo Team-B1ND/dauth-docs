@@ -27,7 +27,7 @@ sidebar_position: 1
 
 자신이 등록한 서비스의 **클라이언트ID** 및 **리다이렉트URL**을 이용하여 아래의 주소로 연결한다.
 
-> **http://dauth.b1nd.com/login?client_id=(클라이언트ID)&redirect_uri=(리다이렉트URI)**
+> **https://dauth.b1nd.com/login?client_id=(클라이언트ID)&redirect_uri=(리다이렉트URI)**
 
 ### 자신의 서비스 이름과 맞는지 확인한다
 
@@ -42,6 +42,6 @@ sidebar_position: 1
 
 ### 리다이렉트된 주소로 받은 코드를 아래주소에 POST메서드로 보낸다
 
-> **http://dauth.b1nd.com/api/token**
+> **https://dauth.b1nd.com/api/token**
 
 ![postman](/img/DAuth/postman.png)

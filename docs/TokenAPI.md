@@ -7,14 +7,14 @@ sidebar_position: 1
 
 # <a>API Docs</a>
 > **access-token을 발급받기 위한 API   
-> 기본 엔드 포인트 ```http://dauth.b1nd.com/api```**
+> 기본 엔드 포인트 ```https://dauth.b1nd.com/api```**
 
 ## 토큰
 ### POST : 토큰 발급받기
 
 **요청 URL**
 ```bash
-http://dauth.b1nd.com/api/token
+https://dauth.b1nd.com/api/token
 ```
 
 **요청 Body**   
