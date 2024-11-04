@@ -32,7 +32,7 @@ sidebar_position: 1
 ### 자신의 서비스 이름과 맞는지 확인합니다
 
 사진상의 빨간 박스에 자신이 등록한 서비스 이름이 뜹니다. 맞다면 로그인 폼에 ID, PW를 넣고 로그인 합니다.
-![checkMyService](/img/DAuth/CheckMyService.png)
+![checkMyService](/img/DAuth/CheckMyServices.png)
 
 ### 서버로 로그인 성공시 아래주소로 리다이렉트 됩니다
 
