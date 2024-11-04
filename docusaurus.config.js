@@ -8,6 +8,7 @@ module.exports = {
   url: "https://dauth.b1nd.com/",
   baseUrl: "/docs/",
   onBrokenLinks: "throw",
+  onBrokenAnchors: 'ignore',
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "Team-B1ND",
@@ -73,11 +74,11 @@ module.exports = {
           items: [
             {
               label: "Team B1ND",
-              href: "httpss://b1nd.com/",
+              href: "https://b1nd.com/",
             },
             {
               label: "GitHub",
-              href: "https://Team-B1ND",
+              href: "https://github.com/Team-B1ND",
             },
           ],
         },

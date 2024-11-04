@@ -20,16 +20,14 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-      
+
       - name: Build project
         run: yarn run build
-      
+
       - name: Deploy to GitHub Pages
         env:
-          GIT_USER: ${{ secrets.GIT_USER }}
-          GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name "${{ env.GIT_USER }}"
-          git config user.email "${{ env.GIT_EMAIL }}"
-          yarn run deploy
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          yarn run deploy -- --repo "https://${{ secrets.GITHUB_TOKEN }}@github.com/Team-B1ND/DAuth_Docs.git"
