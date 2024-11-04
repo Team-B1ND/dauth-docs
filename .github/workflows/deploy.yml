@@ -24,15 +24,11 @@ jobs:
       - name: Build project
         run: yarn run build
 
-      - name: Configure Git for deployment
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin "https://${{ secrets.GITHUB_TOKEN }}@github.com/Team-B1ND/DAuth_Docs.git"
-        env:
-          GIT_USER: "github-actions[bot]"
+- name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          user_name: ${{ secrets.GIT_USER }}
+          user_email: 41898282+${{ secrets.GIT_EMAIL}}@users.noreply.github.com
 
-      - name: Deploy to GitHub Pages
-        run: yarn run deploy
-        env:
-          GIT_USER: "${{secrets.GIT_USER}}"
