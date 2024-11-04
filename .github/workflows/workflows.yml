@@ -21,14 +21,15 @@ jobs:
       - name: Install dependencies
         run: yarn install
       
-      - name: Build dependencies
+      - name: Build project
         run: yarn run build
       
-
       - name: Deploy to GitHub Pages
         env:
           GIT_USER: ${{ secrets.GIT_USER }}
+          GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git config user.name "${{ secrets.GIT_USER }}"
-          git config user.email "${{ secrets.GIT_EMAIL }}"
+          git config user.name "${{ env.GIT_USER }}"
+          git config user.email "${{ env.GIT_EMAIL }}"
           yarn run deploy
