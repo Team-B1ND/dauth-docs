@@ -24,10 +24,11 @@ jobs:
       - name: Build project
         run: yarn run build
 
-      - name: Deploy to GitHub Pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Configure Git for deployment
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          yarn run deploy -- --repo "https://${{ secrets.GITHUB_TOKEN }}@github.com/Team-B1ND/DAuth_Docs.git"
+          git remote set-url origin "https://${{ secrets.GITHUB_TOKEN }}@github.com/Team-B1ND/DAuth_Docs.git"
+
+      - name: Deploy to GitHub Pages
+        run: yarn run deploy
