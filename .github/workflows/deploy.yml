@@ -25,7 +25,6 @@ jobs:
         run: yarn run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
         run: yarn run deploy
         with:
           github_token: ${{ secrets.GH_TOKEN }}
