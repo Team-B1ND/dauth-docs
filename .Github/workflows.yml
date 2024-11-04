@@ -21,8 +21,9 @@ jobs:
       - name: Install dependencies
         run: yarn install
       
-      - name: Serve documentation
-        run: yarn serve
+      - name: Build dependencies
+        run: yarn run build
+      
 
       - name: Deploy to GitHub Pages
         env:
