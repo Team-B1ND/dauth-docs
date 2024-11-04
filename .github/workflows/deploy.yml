@@ -24,8 +24,9 @@ jobs:
       - name: Build project
         run: yarn run build
 
-- name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
+        run: yarn run deploy
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
