@@ -26,12 +26,12 @@ jobs:
       
       - name: Set up Git user
         run: |
-          git config --global user.name MDEV-DGSW
+          git config --global user.name Team-B1ND
           git config --global user.email mdev_team@dgsw.hs.kr
 
       - name: Build and deploy
         env:
-          GIT_USER: MDEV-DGSW
+          GIT_USER: Team-B1ND
           GIT_EMAIL: mdev_team@dgsw.hs.kr
         run: yarn run deploy
         
