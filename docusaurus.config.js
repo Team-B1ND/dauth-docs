@@ -13,6 +13,7 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "Team-B1ND",
   projectName: "dauth-docs",
+  trailingSlash: false,
   themeConfig: {
     prism: {
       additionalLanguages: ["kotlin", "kt", "kts"],
