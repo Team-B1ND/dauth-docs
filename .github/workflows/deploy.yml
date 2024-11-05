@@ -31,7 +31,7 @@ jobs:
 
       - name: Build and deploy
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }} 
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }} 
         run: |
           yarn run deploy
-          git push --force https://${{ secrets.GH_TOKEN }}@github.com/Team-B1ND/dauth-docs.git master
+          git push --force https://${{ secrets.GIT_TOKEN }}@github.com/Team-B1ND/dauth-docs.git master
