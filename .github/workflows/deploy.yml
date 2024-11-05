@@ -20,15 +20,14 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-
+      
       - name: Build project
         run: yarn run build
-
+      
       - name: Deploy to GitHub Pages
-        run: yarn run deploy
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./build
-          user_name: ${{ secrets.GIT_USER }}
-          user_email: 41898282+${{ secrets.GIT_EMAIL}}@users.noreply.github.com
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  
+        run: |
+          git config user.name "${{ secrets.GIT_USER }}"  
+          git config user.email "${{ secrets.GIT_EMAIL }}" 
+          yarn run deploy
