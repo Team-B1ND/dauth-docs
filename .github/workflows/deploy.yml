@@ -1,4 +1,4 @@
-name: DAuth
+name: Deploy
 
 on:
   push:
@@ -26,12 +26,10 @@ jobs:
       
       - name: Set up Git user
         run: |
-          git config --global user.name Team-B1ND
-          git config --global user.email mdev_team@dgsw.hs.kr
+          git config user.name "${{ secrets.GIT_USER }}"
+          git config user.email "${{ secrets.GIT_EMAIL }}"
 
-      - name: Build and deploy
-        env:
-          GIT_USER: Team-B1ND
-          GIT_EMAIL: mdev_team@dgsw.hs.kr
+      - name: Deploy to GitHub Pages
         run: yarn run deploy
-        
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
