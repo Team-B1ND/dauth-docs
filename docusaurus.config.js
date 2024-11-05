@@ -12,7 +12,7 @@ module.exports = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "Team-B1ND",
-  projectName: "DAuth_Docs",
+  projectName: "dauth-docs",
   themeConfig: {
     prism: {
       additionalLanguages: ["kotlin", "kt", "kts"],
